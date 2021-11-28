@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Stolk"
+  given-names: "Sander"
+  orcid: "https://orcid.org/0000-0003-2254-6613"
+title: "evoke"
+url: "https://github.com/ssstolk/evoke"
+preferred-citation:
+  type: conference-paper
+  authors:
+  - family-names: "Stolk"
+    given-names: "Sander"
+    orcid: "https://orcid.org/0000-0003-2254-6613"
+  journal: "Exploring Early Medieval English Eloquence: A Digital Humanities Approach with A Thesaurus of Old English and Evoke"
+  start: 318 # First page number
+  end: 358 # Last page number
+  title: "Evoke: Exploring and Extending A Thesaurus of Old English using a Linked Data Approach"
+  year: 2021
+  url: "https://doi.org/10.1163/18756719-12340235"
+  doi: 10.1163/18756719-12340235
