@@ -6,7 +6,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "start": "webpack serve",
-    "build": "webpack --env.prod=true",
+    "build": "webpack --env prod=true",
     "clean": "rmdir /s /q node_modules",
     "postbuild": "npm run build-war",
     "build-dev": "webpack",
