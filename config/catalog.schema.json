@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Evoke config schema",
+
+  "type": "object",
+  "properties": {
+    "service": {
+      "description": "Data services that provide access to one or more datasets (or rather, to specific distributions of these sets).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "properties": {
+          "@id": {
+            "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "endpointURL": {
+            "type": "string"
+          },
+          "importURL": {
+            "type": "string"
+          },
+          "landingPage": {
+            "type": "string"
+          },
+          "conformsTo": {
+            "type": "string"
+          },
+          "endpointDescription": {
+            "type": "string"
+          },
+          "mode": {
+            "enum": ["get", "post"]
+          },
+          "auth": {
+            "enum": ["basic", null]
+          },
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["@id", "title", "identifier", "endpointURL", "endpointDescription"]
+    },
+    "dataset": {
+      "description": "Datasets, in a specific distribution, accessible via a data service.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "properties": {
+          "@id": {
+           "type": "string"
+          },
+          "@type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "identifier": {
+            "type": "string"
+          },
+          "landingPage": {
+            "type": "string"
+          },
+          "license": {
+            "type": "string"
+          },
+          "spatial": {
+            "type": "string"
+          },
+          "temporal": {
+            "type": "object",
+            "properties": {
+              "startDate": {
+                "type": "object"
+              },
+              "endDate": {
+                "type": "object"
+              }
+            }
+          },
+          "issued": {
+            "type": "string"
+          },
+          "modified": {
+            "type": "string"
+          },
+          "requires": {
+            "type": "array",
+            "minItems": 0,
+            "items": {
+              "type": "string"
+            }
+          },
+          "distribution": {
+            "type": "object",
+            "properties": {
+              "accessService": {
+                "type": "string"
+              },
+              "accessGraph": {
+                "anyOf": [
+                  { "type": "string" },
+                  { "type": "array", "minItems": 1 }
+                ]
+              },
+              "mediaType": {
+                "type": "string"
+              }
+            },
+            "required": ["accessService"]
+          }
+        }
+      },
+      "required": ["@id", "title", "identifier", "distribution"]
+    }
+  },
+  "required": [ "service", "dataset" ]
+}

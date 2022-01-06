@@ -1,0 +1,62 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright © 2018-2022 Sander Stolk
+
+.node {
+    cursor: pointer;
+}
+.node circle {
+    cursor: pointer;
+    fill: yellow;
+    stroke: black;
+    stroke-width: 1.5px;
+}
+.node text {
+    cursor: pointer;
+    font-size: 15px;
+}
+.node text tspan.spacing {
+    cursor: default;
+}
+path.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+}
+.d3treeTip {
+    fill: grey;
+    font-size: 0.7rem;
+}
+.d3treeOpen {
+    font-style: italic;
+    font-weight: bold;
+    font-size: smaller;
+    cursor: pointer;
+}
+.d3treeOpenParent {
+    fill: grey;
+    animation: opac 0.75s linear;
+}
+@keyframes opac {
+    from {
+        fill: white;
+    }
+    to {
+        fill: grey;
+    }
+}
+.d3treeOpenChild {
+    fill: white;
+}
+.node:hover text tspan.d3treeOpenChild {
+    //    visibility: visible;
+    fill: grey;
+    animation: opac 0.75s linear;
+}
+@keyframes opac {
+    from {
+        fill: white;
+    }
+    to {
+        fill: grey;
+    }
+}

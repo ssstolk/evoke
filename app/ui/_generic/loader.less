@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright © 2018-2022 Sander Stolk
+
+.ellipsis-loading {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    -webkit-animation: ellipsis steps(3, end) 1800ms infinite;
+    animation: ellipsis steps(3, end) 1800ms infinite;
+    width: 0.25em;
+}
+
+@keyframes ellipsis {
+    to {
+        width: 1em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+    to {
+        width: 1em;
+    }
+}

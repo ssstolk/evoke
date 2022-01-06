@@ -1,0 +1,8 @@
+{
+  "editor.wordBasedSuggestions": false,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "files.exclude": {
+    "**/.atl-cache.*": true,
+    "**/.git": true
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+typings/
+node/
+reports/
+dist/
+.atl-cache*
+package-lock.json
+yarn.lock

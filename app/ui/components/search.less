@@ -1,0 +1,52 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright © 2018-2022 Sander Stolk
+
+.search-component {
+    .dropdown-menu {
+        max-height: 80vh;
+        overflow: auto;
+    }
+    .invisible-dropdown-toggler {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0;
+    }
+    .dropdown-menu-right {
+        position: absolute !important;
+        will-change: unset !important;
+        transform: none !important;
+        top: 100% !important;
+        right: 0 !important;
+        left: auto !important;
+    }
+    .dropdown-divider {
+        margin: 0.5rem 0 0 0.5rem;
+    }
+    .dropdown-header-group {
+        background-color: #868e96;
+        font-style: italic;
+        color: white;
+        padding: 0.4rem 0 0.4rem 0rem;
+        a {
+            color: white;
+        }
+        :hover {
+            background-color: inherit;
+        }
+    }
+    .search-result-item-details {
+        margin-left: 10px;
+        opacity: 0.5;
+    }
+    .search-result-subheader {
+        background-color: #e9ecef;
+        padding: 0.05rem 1.5rem;
+    }
+    .search-result-subheader-details {
+        font-size: smaller;
+        font-style: italic;
+        color: darkgray;
+        margin-left: 10px;
+    }
+}

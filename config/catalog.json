@@ -1,0 +1,186 @@
+{
+  "@context": "https://raw.githubusercontent.com/ssstolk/DCAT-AP/master/releases/2.0.0/Draft/dcat-ap_2.0.0.jsonld",
+  "$schema": "./catalog.schema.json",
+  
+  "@id": "",
+  "@type": "Catalog",
+  
+  "service": [
+    {
+      "@id": "http://evoke.ullet.net/platform",
+      "@type": "DataService",
+      "title": "Evoke platform",
+      "identifier": "evoke-platform",
+      "endpointURL": "http://142.93.226.251:8081",
+      "landingPage": "http://evoke.ullet.net/app/",
+      "endpointDescription": "http://evoke.ullet.net/api",
+      
+      "mode": "get",
+      "auth": "basic",
+      "username": "evoke-user",
+      "password": "89as23jdieodzpiow82laz22p",
+      
+      "servesDataset": [ 
+        "http://oldenglishthesaurus.arts.gla.ac.uk/",
+        "https://w3id.org/evoke/set/andreas",
+        "https://w3id.org/evoke/set/aelfric",
+        "https://w3id.org/evoke/set/beowulf",
+        "https://w3id.org/evoke/set/oemartyrology",
+        "https://w3id.org/evoke/set/ofris-kinship",
+        "https://w3id.org/evoke/set/riddle47"
+      ]
+    }
+  ],
+  
+  "dataset": [
+    {
+      "@id": "http://oldenglishthesaurus.arts.gla.ac.uk/",
+      "@type": "Dataset",
+      "title": "A Thesaurus of Old English",
+      "identifier": "toe",
+      "landingPage": "http://evoke.ullet.net/thesaurus/toe/",
+      "license": "http://evoke.ullet.net/thesaurus/toe/#license",
+      "spatial": "https://www.geonames.org/6269131",
+      "temporal": { 
+        "startDate": { "@value": "500", "@type": "xsd:date" },
+        "endDate": { "@value": "1100", "@type": "xsd:date" } 
+      } ,
+      "issued": "2017-05-26",
+      "distribution": {
+        "accessService": "http://evoke.ullet.net/platform",
+        "accessGraph": "http://oldenglishthesaurus.arts.gla.ac.uk/",
+        "mediaType": "application/sparql-results+json"
+      }
+    },
+    {
+      "@id": "https://w3id.org/evoke/set/andreas",
+      "@type": "Dataset",
+      "title": "Andreas Thesaurus",
+      "identifier": "andreas",
+      "landingPage": "http://evoke.ullet.net/content/andreas/",
+      "license": "http://evoke.ullet.net/content/andreas/#license",
+      "spatial": "https://www.geonames.org/6269131",
+      "temporal": { 
+        "startDate": { "@value": "500", "@type": "xsd:date" },
+        "endDate": { "@value": "1100", "@type": "xsd:date" } 
+      } ,
+      "issued": "2021-11-02",
+      "requires": [
+        "http://oldenglishthesaurus.arts.gla.ac.uk/" 
+      ],
+      "distribution": {
+        "accessService": "http://evoke.ullet.net/platform",
+        "accessGraph": "https://w3id.org/evoke/set/andreas",
+        "mediaType": "application/sparql-results+json"
+      }
+    },
+	{
+		"@id": "https://w3id.org/evoke/set/aelfric",
+		"@type": "Dataset",
+		"title": "Ælfrician Vocabulary",
+		"identifier": "aelfric",
+		"landingPage": "http://evoke.ullet.net/content/aelfric/",
+		"license": "http://evoke.ullet.net/content/aelfric/#license",
+		"temporal": { 
+			"startDate": { "@value": "955", "@type": "xsd:date" },
+			"endDate": { "@value": "1010", "@type": "xsd:date" } 
+		} ,
+		"issued": "2021-11-11",
+		"requires": [
+			"http://oldenglishthesaurus.arts.gla.ac.uk/" 
+		],
+		"distribution": {
+			"accessService": "http://evoke.ullet.net/platform",
+			"accessGraph": "https://w3id.org/evoke/set/aelfric",
+			"mediaType": "application/sparql-results+json"
+		}
+	},
+    {
+      "@id": "https://w3id.org/evoke/set/beowulf",
+      "@type": "Dataset",
+      "title": "Beowulf Thesaurus",
+      "identifier": "beowulf",
+      "landingPage": "http://evoke.ullet.net/content/beowulf/",
+      "license": "http://evoke.ullet.net/content/beowulf/#license",
+      "spatial": "https://www.geonames.org/6269131",
+      "temporal": { 
+        "startDate": { "@value": "500", "@type": "xsd:date" },
+        "endDate": { "@value": "1100", "@type": "xsd:date" } 
+      } ,
+      "issued": "2021-11-02",
+      "requires": [
+        "http://oldenglishthesaurus.arts.gla.ac.uk/" 
+      ],
+      "distribution": {
+        "accessService": "http://evoke.ullet.net/platform",
+        "accessGraph": "https://w3id.org/evoke/set/beowulf",
+        "mediaType": "application/sparql-results+json"
+      }
+    },
+	{
+	  "@id": "https://w3id.org/evoke/set/oemartyrology",
+	  "@type": "Dataset",
+	  "title": "Old English Martyrology Thesaurus",
+	  "identifier": "oemartyrology",
+	  "landingPage": "http://evoke.ullet.net/content/oemartyrology/",
+	  "license": "http://evoke.ullet.net/content/oemartyrology/#license",
+	  "spatial": "https://www.geonames.org/6269131",
+	  "temporal": { 
+	    "startDate": { "@value": "500", "@type": "xsd:date" },
+	    "endDate": { "@value": "1100", "@type": "xsd:date" } 
+	  },
+	  "issued": "2021-11-02",
+	  "requires": [
+        "http://oldenglishthesaurus.arts.gla.ac.uk/" 
+	  ],
+	  "distribution": {
+	    "accessService": "http://evoke.ullet.net/platform",
+	    "accessGraph": "https://w3id.org/evoke/set/oemartyrology",
+	    "mediaType": "application/sparql-results+json"
+	  }
+	},
+	{
+      "@id": "https://w3id.org/evoke/set/ofris-kinship",
+      "@type": "Dataset",
+      "title": "Old Frisian: Kinship",
+      "identifier": "ofris-kinship",
+      "landingPage": "http://evoke.ullet.net/content/ofris-kinship/",
+      "license": "http://evoke.ullet.net/content/ofris-kinship/#license",
+      "temporal": { 
+        "startDate": { "@value": "1100", "@type": "xsd:date" },
+        "endDate": { "@value": "1550", "@type": "xsd:date" } 
+      },
+      "issued": "2021-11-02",
+      "requires": [
+        "http://oldenglishthesaurus.arts.gla.ac.uk/" 
+      ],
+      "distribution": {
+        "accessService": "http://evoke.ullet.net/platform",
+        "accessGraph": "https://w3id.org/evoke/set/ofris-kinship",
+        "mediaType": "application/sparql-results+json"
+      }
+    },
+	{
+      "@id": "https://w3id.org/evoke/set/riddle47",
+      "@type": "Dataset",
+      "title": "Exeter Riddle 47",
+      "identifier": "riddle47",
+      "landingPage": "http://evoke.ullet.net/content/riddle47/",
+      "license": "http://evoke.ullet.net/content/riddle47/#license",
+      "spatial": "https://www.geonames.org/6269131",
+      "temporal": { 
+        "startDate": { "@value": "500", "@type": "xsd:date" },
+        "endDate": { "@value": "1100", "@type": "xsd:date" } 
+      },
+      "issued": "2020-07-01",
+      "requires": [
+        "http://oldenglishthesaurus.arts.gla.ac.uk/" 
+      ],
+      "distribution": {
+        "accessService": "http://evoke.ullet.net/platform",
+        "accessGraph": "https://w3id.org/evoke/set/riddle47",
+        "mediaType": "application/sparql-results+json"
+      }
+    }
+  ]
+}

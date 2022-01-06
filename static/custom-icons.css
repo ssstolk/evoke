@@ -1,0 +1,16 @@
+/* custom icons */
+.icon-term-type {
+    display: inline-block;
+    font-family: "Icons";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    background: url(img/icon-term-type.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+}

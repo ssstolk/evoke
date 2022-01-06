@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright © 2018-2022 Sander Stolk
+
+// General
+#browse-categories {
+    border-top: 1px dashed #ccc;
+    margin: 10px 0px 0px 0px;
+}
+button {
+    box-shadow: none;
+}
+
+// Breadcrumbs
+.breadcrumb {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+.breadcrumb-item {
+    cursor: pointer;
+    color: black;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}

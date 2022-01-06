@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome Canary with unit tests",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeExecutable":
+        "${env.USERPROFILE}/AppData/Local/Google/Chrome SxS/Application/chrome.exe",
+      "runtimeArgs": ["--new-window", "--remote-debugging-port=9222"],
+      "url": "http://localhost:8080/tests.html?wait=1000",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceRoot}"
+    },
+    {
+      "name": "Attach to Chrome on 9222",
+      "type": "chrome",
+      "request": "attach",
+      "url": "localhost*",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceRoot}",
+      "verboseDiagnosticLogging": false
+    }
+  ]
+}
